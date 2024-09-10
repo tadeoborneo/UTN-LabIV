@@ -3,18 +3,18 @@ function validateForm() {
     return validateFormName() && validateFormSurname() && validateFormPassword() && validateFormEmail();
 }
 
-function validateFormEmail(){
+function validateFormEmail() {
     let emailElement = document.getElementById("email");
     let emailValue = emailElement.value;
 
-    if(!emailValue){
-        showError(emailElement.id,"El campo no puede estar vacio")
+    if (!emailValue) {
+        showError(emailElement.id, "El campo no puede estar vacio")
         return false;
-    }else if(!/^[^\s@]+@(gmail\.com|outlook\.com|icloud\.com)$/i.test(emailValue)){
-        showError(emailElement.id,"El campo tiene que tener un formato de email valido");
+    } else if (!/^[^\s@]+@(gmail\.com|outlook\.com|icloud\.com)$/i.test(emailValue)) {
+        showError(emailElement.id, "El campo tiene que tener un formato de email valido");
         return false;
     }
-    else{
+    else {
         showError(emailElement.id, "")
         return true;
     }
@@ -82,6 +82,22 @@ document.getElementById("createAccountForm").onsubmit = function (event) {
 }
 
 function showError(elementId, message) {
-    document.getElementById(elementId + "Error").innerHTML = message;
+    const errorElement = document.getElementById(elementId + "Error");
+    if (errorElement) {
+        errorElement.innerHTML = message;
+
+        if (message) {
+            errorElement.classList.remove("error-hidden");
+        } else {
+            errorElement.classList.add("error-hidden");
+        }
+    }
 }
 
+document.getElementById("createAccountForm").addEventListener("reset", function () {
+    const errorElements = document.querySelectorAll(".error");
+
+    errorElements.forEach(function (element) {
+        element.classList.add("error-hidden");
+    })
+})
