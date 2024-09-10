@@ -1,18 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Forms</title>
 </head>
+
 <body>
     <h1>Crear cuenta</h1>
-    <form action="">
+    <form name="form" id="createAccountForm" onsubmit="return validateForm()">
+
         <label for="name">Nombre</label>
-        <input type="text" name="name" placeholder="Ingresa tu nombre" required>
-        <label for="apellido"></label>
-        <input type="text" name="apellido" placeholder="Ingresa tu apellido" required >
+        <input type="text" name="name" id="name" placeholder="Ingresa nombre" >
+        <span id="nameError" class="error"></span>
+        <br>
+
+        <label for="surname">Apellido</label>
+        <input type="text" name="surname" id="surname" placeholder="Ingresa apellido">
+        <span id="surnameError" class="error"></span>
+        <br>
+
+        <label for="age">Edad</label>
+        <input type="number" name="age" id="age" placeholder="Ingresar edad">
+        <span id="ageError" class="error"></span>
+        <br>
+
+        <label for="password">Contrasenia</label>
+        <input type="password" name="password" id="password" placeholder="Ingresar contrasenia">
+        <span id="passwordError" class="error"></span>
+        <br>
+
+        <label for="email">Email</label>
+        <input type="text" name="email" id="email" placeholder="Ingresar correo">
+        <span id="emailError" class="error"></span>
+        <br>
+
+        <button type="submit">Enviar</button>
+
     </form>
-    
+    <script src="scripts/form-validation.js"> </script>
 </body>
+
 </html>
