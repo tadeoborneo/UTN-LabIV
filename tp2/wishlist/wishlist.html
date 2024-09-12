@@ -4,28 +4,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
     <title>Wishlist</title>
 </head>
 
 <body>
     <h1>Wishlist</h1>
-    <h2>Lista de productos</h2>
-    <div id="productList">
-        <ul>
-            <li>Producto 1</li>
-            <button class="addToWishlist" onclick="addToWishlist()">Agregar a la lista de deseados</button>
-            <li>Producto 2</li>
-            <button class="addToWishlist" onclick="addToWishlist()">Agregar a la lista de deseados</button>
-            <li>Producto 3</li>
-            <button class="addToWishlist" onclick="addToWishlist()">Agregar a la lista de deseados</button>
-            <li>Producto 4</li>
-            <button class="addToWishlist" onclick="addToWishlist()">Agregar a la lista de deseados</button>
-            <li>Producto 5</li>
-            <button class="addToWishlist" onclick="addToWishlist()">Agregar a la lista de deseados</button>
+
+    <div class="product-list-container">
+        <h2>Lista de productos</h2>
+        <ul class="product-list-container__products">
+            <li class="product-container__item">
+                <p class="product-container__product-name">Producto 1</p>
+                <button class="product-list-container__add-to-wishlist-button" onclick="addToWishlist(event)">Agregar a
+                    la lista de deseados</button>
+            </li>
+            <li class="product-container__item">
+                <p class="product-container__product-name">Producto 2</p>
+                <button class="product-list-container__add-to-wishlist-button" onclick="addToWishlist(event)">Agregar a
+                    la lista de deseados</button>
+            </li>
+            <li class="product-container__item">
+                <p class="product-container__product-name">Producto 3</p>
+                <button class="product-list-container__add-to-wishlist-button" onclick="addToWishlist(event)">Agregar a
+                    la lista de deseados</button>
+            </li>
+            <li class="product-container__item">
+                <p class="product-container__product-name">Producto 4</p>
+                <button class="product-list-container__add-to-wishlist-button" onclick="addToWishlist(event)">Agregar a
+                    la lista de deseados</button>
+            </li>
+            <li class="product-container__item">
+                <p class="product-container__product-name">Producto 5</p>
+                <button class="product-list-container__add-to-wishlist-button" onclick="addToWishlist(event)">Agregar a
+                    la lista de deseados</button>
+            </li>
         </ul>
     </div>
-    <h2>Lista de deseados</h2>
-    <script src="scripts/wishlist-script"></script>
+    <div class="wishlist-container">
+        <h2 class="whislist-container__title">Lista de deseados</h2>
+        <ul class="wishlist-container__wishlisted-products">
+
+        </ul>
+    </div>
+
+    <script src="scripts/wishlist-script.js"></script>
 </body>
 
 </html>
