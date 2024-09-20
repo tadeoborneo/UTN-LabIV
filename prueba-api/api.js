@@ -22,8 +22,8 @@ let getApi = (url) => {
 
 let combineCompanyAndEmployee = async () => {
     let apiPromise = await Promise.all([
-        loadApi("https://utn-lubnan-api-1.herokuapp.com/api/Company"),
-        loadApi("https://utn-lubnan-api-1.herokuapp.com/api/Employee")
+        getApi("https://utn-lubnan-api-1.herokuapp.com/api/Company"),
+        getApi("https://utn-lubnan-api-1.herokuapp.com/api/Employee")
     ])
         .then((response) => {
             console.log("Cargado con exito");
@@ -41,13 +41,13 @@ let combineCompanyAndEmployee = async () => {
         })
 }
 
-//combineCompanyAndEmployee();
+combineCompanyAndEmployee();
 
 let postEmployee = (url, employeeData) => {
     return new Promise((resolve, reject) => {
         let request = new XMLHttpRequest();
         request.open('POST', url);
-        request.setRequestHeader('Content-Type', 'application/json');
+        request.setRequestHeader('Content-Type', 'application/json;charset=UTF-8');
 
         request.onload = () => {
             if (request.status === 200) {
