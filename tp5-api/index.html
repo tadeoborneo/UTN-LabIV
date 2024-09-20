@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tp 5</title>
+</head>
+<body>
+    <div class="form-container">
+        <form id="employeeDataForm">
+            <input type="text" name="employeeFirstName" id="employeeFirstName" placeholder="First name">
+            <input type="text" name="employeeLastName" id="employeeLastName" placeholder="Last name" >
+            <input type="text" name="employeeEmail" id="employeeEmail" placeholder="Email">
+            <select name="companies" id="selectEmployeeCompany">
+                <option value="" selected disabled>Select a company</option>
+            </select>
+            <button type="submit">Add employee</button>
+        </form>
+    </div>
+    <div class="employee-list-container">
+        <button id="refreshTableButton">Refresh</button>
+        <table id="employeeTable">
+            <thead>
+                <tr>
+                    <td>#</td>
+                    <td>First name</td>
+                    <td>Last name</td>
+                    <td>Company id</td>
+                    <td>Company name</td>
+                    <td>-</td>
+                </tr>
+            </thead>
+            <tbody>
+                
+            </tbody>
+        </table>
+    </div>
+    <script src="scripts/api-interaction.js"></script>
+</body>
+</html>
