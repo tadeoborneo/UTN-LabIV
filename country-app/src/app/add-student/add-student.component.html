@@ -1,0 +1,9 @@
+<form>
+    <input [(ngModel)]="name" type="text" name="name" placeholder="Name">
+    <input [(ngModel)]="lastname"  type="text" name="lastname" placeholder="Last Name">
+    <input [(ngModel)]="email"  type="text" name="email" placeholder="Email">
+    <input [(ngModel)]="dni"  type="text" name="dni" placeholder="Dni">
+    <input [(ngModel)]="address"  type="text" name="address" placeholder="Address">
+
+    <button (click)="addStudent()" type="button">Add</button>
+</form>

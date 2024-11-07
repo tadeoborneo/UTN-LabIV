@@ -1,0 +1,25 @@
+<div class="container">
+    <table class="table table-striped bg-secondary">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>First name</th>
+                <th>Last Name</th>
+                <th>Email</th>
+                <th>Country</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let user of users">
+                <td>{{user.id}}</td>
+                <td>{{user.firstname}}</td>
+                <td>{{user.lastname}}</td>
+                <td>{{user.email}}</td>
+                <td>{{user.country}}</td>
+                <td><button class="btn btn-danger" (click)="deleteUser(user.id)">Delete</button></td>
+            </tr>
+
+        </tbody>
+    </table>
+</div>

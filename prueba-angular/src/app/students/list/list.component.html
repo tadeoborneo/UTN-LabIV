@@ -1,0 +1,7 @@
+<h1>LIST</h1>
+
+<ul>
+    <li *ngFor="let std of studentList"> {{ std?.name }}  {{ std?.age }}</li>
+</ul>
+
+<button *ngIf="studentList.length > 0" (click)="deleteLastStudent()">Delete last</button>

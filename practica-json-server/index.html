@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica Json-Server</title>
+</head>
+
+<body>
+    <h1>Clients</h1>
+    <div class="addClientContainer">
+        <h2>Add client</h2>
+        <form id="addClientForm">
+            <input type="text" name="firstName" id="firstName" placeholder="First name">
+            <input type="text" name="lastName" id="lastName" placeholder="Last name">
+            <input type="text" name="email" id="email" placeholder="Email">
+            <input type="text" name="country" id="country" placeholder="Country">
+            <button>Submit</button>
+        </form>
+
+    </div>
+    <div class="clientTableContainer">
+        <h2>Table</h2>
+        <button onclick="renderTable()">Render table</button>
+        <table id="clientTable">
+            <thead>
+                <tr>
+                    <td>#</td>
+                    <td>First name</td>
+                    <td>Last name</td>
+                    <td>Email</td>
+                    <td>Country</td>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
